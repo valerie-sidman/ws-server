@@ -1,0 +1,31 @@
+{
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "name": "ahj-homework",
+  "version": "1.0.0",
+  "description": "task",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "yarn install && yarn global add pm2",
+    "pm2": "pm2 start server.js",
+    "start": "forever server.js",
+    "watch": "forever -w server.js",
+    "stop": "pm2 stop server",
+    "restart": "pm2 restart server",
+    "logs": "pm2 logs server"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "author": "Valerie Sidorova",
+  "license": "MIT",
+  "dependencies": {
+    "core-js": "3",
+    "forever": "^3.0.4",
+    "pm2": "^4.5.0",
+    "ws": "^7.4.1"
+  }
+}
